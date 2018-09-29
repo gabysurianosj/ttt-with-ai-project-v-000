@@ -30,5 +30,16 @@ class Game
     won? || draw? ? true : false
   end
   
+  def won?
+    WIN_COMBINATIONS.each {|win_combo|
+      position_1 = board.cells[win_combo[0]]
+      position_2 = board.cells[win_combo[1]]
+      position_3 = board.cells[win_combo[2]]
+
+      return win_combo if ((position_1 == "X" && position_2 == "X" && position_3 == "X") ||
+                          (position_1 == "O" && position_2 == "O" && position_3 == "O"))
+    }
+    return false
+  end
   
 end 
