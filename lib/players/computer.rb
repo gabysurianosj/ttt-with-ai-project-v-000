@@ -46,5 +46,6 @@ module Players
     end 
     
     def check_for_winning_move
+      winning_move 
   end 
 end 
