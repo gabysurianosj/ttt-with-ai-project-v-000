@@ -62,5 +62,11 @@ module Players
       end 
       winning_move
     end 
+    
+    def block_opponent
+      blocking_move = nil 
+      WIN_COMBINATIONS.detect do |win_combo|
+        position_1 = board.cells[win_combo[0]]
+    
   end 
 end 
