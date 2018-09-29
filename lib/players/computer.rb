@@ -59,5 +59,6 @@ module Players
         elsif (position_1 == " " && position_2 == self.token && position_3 == self.token)
           winning_move = win_combo[0]
         end
+      end 
   end 
 end 
