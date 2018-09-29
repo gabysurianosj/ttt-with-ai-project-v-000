@@ -42,4 +42,14 @@ class Game
     return false
   end
   
+  def draw?
+    !won? && board.full? ? true : false
+  end
+
+  def winner
+    if won = won?
+      board.cells[won.first]
+    end
+  end
+  
 end 
