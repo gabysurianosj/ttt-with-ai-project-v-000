@@ -10,7 +10,7 @@ class Board
   end 
   
   def reset!
-    self.cells=(Array.new(9,""))
+    self.cells=(Array.new(9," "))
   end 
   
   def display 
