@@ -47,5 +47,17 @@ module Players
     
     def check_for_winning_move
       winning_move = nil 
+      WIN_COMBINATIONS.detect do |win_combo|
+        position_1 = board.cells[win_combo[0]]
+        position_2 = board.cells[win_combo[1]]
+        position_3 = board.cells[win_combo[2]]
+
+        if (position_1 == self.token && position_2 == self.token && position_3 == " ")
+          winning_move = win_combo[2]
+        elsif (position_1 == self.token && position_2 == " " && position_3 == self.token)
+          winning_move = win_combo[1]
+        elsif (position_1 == " " && position_2 == self.token && position_3 == self.token)
+          winning_move = win_combo[0]
+        end
   end 
 end 
