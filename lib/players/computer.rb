@@ -60,6 +60,6 @@ module Players
           winning_move = win_combo[0]
         end
       end 
-      
+      winning_move
   end 
 end 
