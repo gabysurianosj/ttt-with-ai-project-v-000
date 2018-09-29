@@ -41,3 +41,5 @@ module Players
       if self.token == "X"
         opponent_token = "O"
       else 
+        opponent_token = "X" 
+      end 
