@@ -67,6 +67,10 @@ module Players
       blocking_move = nil 
       WIN_COMBINATIONS.detect do |win_combo|
         position_1 = board.cells[win_combo[0]]
+        position_2 = board.cells[win_combo[1]]
+        position_3 = board.cells[win_combo[2]]
     
+      if (position_1 == opponent_token && position_2 == opponent_token && position_3 == " ")
+        blocking_move = win_combo[2]
   end 
 end 
