@@ -27,4 +27,12 @@ module Players
       opponent_token 
       
       if check_for_winning_move != nil 
-        number 
+        number = check_for_winning_move
+      elsif block_opponent != nil
+        number = block_opponent
+      else
+        number = free_move
+      end
+      number += 1
+      return number.to_s #is returning the non-indexed number
+    end
