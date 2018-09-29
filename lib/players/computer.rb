@@ -36,3 +36,8 @@ module Players
       number += 1
       return number.to_s #is returning the non-indexed number
     end
+    
+    def opponent_token
+      if self.token == "X"
+        opponent_token = "O"
+      else 
