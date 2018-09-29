@@ -20,3 +20,12 @@ class Board
     puts "-----------"
     puts " #{cells[6]} | #{cells[7]} | #{cells[8]} "
   end
+  
+  def position(position) 
+    index = input_to_index(position)
+    cells[index]
+  end 
+  
+  def full? 
+    cells.all? {|index| index == "X" || index == "O"}
+  end 
