@@ -72,5 +72,31 @@ module Players
     
       if (position_1 == opponent_token && position_2 == opponent_token && position_3 == " ")
         blocking_move = win_combo[2]
+      elsif (position_1 == opponent_token && position_2 == " " && position_3 == opponent_token)
+          blocking_move = win_combo[1]
+      elsif (position_1 == " " && position_2 == opponent_token && position_3 == opponent_token)
+          blocking_move = win_combo[0]
+      end
+    end
+    blocking_move
+    end
+    
+    def free_move
+      corners = [0, 2, 6, 8]
+      corner_move = corners.detect {|i| board.cells[i] == " "}
+      if board.cells[4] == " "
+        return 4
+      elsif corner_move
+        return corner_move
+      else 
+        empty = []
+        board.cells.each_with_index do |space, index| 
+          if space == " "
+            empty << index 
+          end 
+        end 
+        return empty.sample 
+      end 
+    end 
   end 
-end 
+end
