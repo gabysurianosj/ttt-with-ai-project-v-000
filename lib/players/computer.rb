@@ -7,3 +7,8 @@
 # 4. Else, check if a corner space is open
 # 5. Else, choose another space at random
 
+module Players 
+  class Computer < Player 
+    attr_reader :board 
+    WIN_COMBINATIONS= [
+      ]
