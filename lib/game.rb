@@ -69,5 +69,7 @@ class Game
   end
   
   def play 
+    until over? 
+    
   
 end 
